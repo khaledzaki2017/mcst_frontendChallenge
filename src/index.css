@@ -1,0 +1,18 @@
+@import '~antd/dist/antd.css';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255,255,255,.2);  
+  margin: 16px 24px 16px 0;
+  float: right;
+}
+.ant-layout-header {
+  height: 64px;
+  line-height: 64px;
+  background: #e9ecee;
+}
