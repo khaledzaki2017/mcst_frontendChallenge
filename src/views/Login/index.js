@@ -14,15 +14,15 @@ class Login extends React.Component {
         }
     }
 
-    componentDidMount() {
-        const location = {
-            pathname: '/login',
-            state: { from: { pathname: '/' } }
-        }
-        this.props.history.push(location);
+    // componentDidMount() {
+    //     const location = {
+    //         pathname: '/login',
+    //         state: { from: { pathname: '/' } }
+    //     }
+    //     this.props.history.push(location);
 
 
-    }
+    // }
     usernameChange(e) {
         this.setState({ username: e.target.value })
     }
@@ -46,9 +46,9 @@ class Login extends React.Component {
                     expires: intenMinutes
                 });
                 this.props.setlogin(true);
-                this.props.history.push("/");
-
+                this.props.history.push('/')
             }
+
             else {
                 this.setState({ error: true });
             }

@@ -14,7 +14,7 @@ class Base extends React.Component {
         }
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.auth) {
+        if (nextProps.login) {
             this.setState({ showWelcome: false, showLogin: false });
         } else {
             this.setState({ showWelcome: false, showLogin: true });

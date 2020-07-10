@@ -10,12 +10,7 @@ import { Avatar } from 'antd';
 const { Header, Content } = Layout;
 
 export default class Frame extends React.Component {
-    constructor(props) {
-        super(props);
-        if (!this.props.login) {
-            <Redirect to="/login" />
-        }
-    }
+
     state = { visible: false, placement: 'left' };
 
     showDrawer = () => {

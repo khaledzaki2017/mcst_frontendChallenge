@@ -22,11 +22,7 @@ const Main = () => (
         {/*User will LogIn*/}
         <Route path="/" component={BaseContainer} />
         {/* User is LoggedIn*/}
-        <PrivateRoute
-            exact path="/dashboard"
-            component={SysInfo}
-            isAuthenticated={isLoggedIn() /* this method returns true or false */}
-        />
+        <Route path="/dashboard" component={SysInfo} />
         {/*Page Not Found*/}
         <Route component={NotFound} />
     </Switch>
