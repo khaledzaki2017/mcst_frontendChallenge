@@ -18,7 +18,18 @@
   },
   "login": {
     "username": "admin",
-    "pwd": "password",
+    "pwd": "123456",
     "error": false
+  },
+  "admin": {
+    "name": "Admission Male",
+    "role": "admin",
+    "gender": "male",
+    "stats": {
+      "x": 12,
+      "y": 3,
+      "z": 7,
+      "h": 10
+    }
   }
 }
