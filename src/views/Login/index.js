@@ -69,7 +69,7 @@ class Login extends React.Component {
 
                     <Row>
                         <Col md={8} offset={8}>
-                            Email: <Input class="fadeIn second" type="email" value={this.state.username} onChange={this.usernameChange.bind(this)} />
+                            Username: <Input class="fadeIn second" type="email" value={this.state.username} onChange={this.usernameChange.bind(this)} />
                             Password: <Input class="fadeIn third" type="password" value={this.state.pwd} onChange={this.passwordChange.bind(this)} />
                             {this.state.error ? <Alert message="Your username or password is wrong" type="error" /> : null}
                             <Button class="fadeIn fourth" type="primary" onClick={this.submit.bind(this)}>Login</Button>
