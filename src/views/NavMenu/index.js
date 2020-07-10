@@ -6,6 +6,7 @@ import { CalendarOutlined } from '@ant-design/icons';
 const SubMenu = Menu.SubMenu;
 
 export default class NavMenu extends React.Component {
+
     menuItemClicked(message) {
         switch (message.key) {
             case "logout":
@@ -26,8 +27,8 @@ export default class NavMenu extends React.Component {
                 style={{ height: '100%', borderRight: 0 }}
             >
                 <SubMenu key="sub1" title={<span><Icon type="user" />Applicants</span>}>
-                    <Menu.Item key="1"><Link to="/">Dashboard</Link></Menu.Item>
-                    <Menu.Item key="2"><Link to="/notifications">notifications</Link></Menu.Item>
+                    <Menu.Item key="1" ><Link onClick={this.props.closeDrawer} to="/dashboard">Dashboard</Link></Menu.Item>
+                    <Menu.Item key="2"><Link onClick={this.props.closeDrawer} to="/notifications">notifications</Link></Menu.Item>
                     <Menu.Item key="3">option3</Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title={<span> <CalendarOutlined />Dates</span>}>
