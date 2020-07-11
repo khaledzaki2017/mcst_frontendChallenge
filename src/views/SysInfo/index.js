@@ -3,7 +3,7 @@ import axios from "axios"
 import Charts from "../Charts/index"
 import { setData } from '../../actions/setData';
 import { connect } from 'react-redux';
-
+import { Button } from "antd"
 class Info extends React.Component {
 
     settings = () => {
@@ -13,7 +13,7 @@ class Info extends React.Component {
         return sett
     }
     getData = () => {
-        return (axios('http://localhost:3001/admin')
+        return (axios.get('http://localhost:3001/admin')
             .then(resp => {
                 const d = resp.data
                 this.props.setData(d)
@@ -28,7 +28,7 @@ class Info extends React.Component {
             <div>
                 <h2>System info</h2>
                 <Charts settings={this.settings()} />
-                <button onClick={this.getData.bind(this)}>Show Stats</button>
+                <Button onClick={this.getData.bind(this)}>Show Stats</Button>
 
             </div>
         )

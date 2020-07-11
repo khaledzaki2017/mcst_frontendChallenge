@@ -13,13 +13,7 @@ class Base extends React.Component {
             showWelcome: true
         }
     }
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.login) {
-            this.setState({ showWelcome: false, showLogin: false });
-        } else {
-            this.setState({ showWelcome: false, showLogin: true });
-        }
-    }
+
     componentWillMount() {
         let token = Cookies.get("token");
         if (!token) {

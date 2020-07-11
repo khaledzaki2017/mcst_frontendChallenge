@@ -9,14 +9,6 @@ import PrivateRoute from "./PrivateRoute"
 import SysInfo from "../views/SysInfo/index";
 
 
-// const isLoggedIn = () => {
-//     const token = localStorage.getItem('token')
-//     if (token === "123456") {
-//         return true;
-//     } else
-//         return false;
-// }
-
 const Main = () => (
     <Switch>
         {/*User will LogIn*/}
@@ -25,7 +17,7 @@ const Main = () => (
         <PrivateRoute
             exact path="/dashboard"
             component={SysInfo}
-        // isAuthenticated={isLoggedIn() /* this method returns true or false */}
+        // isAuthenticated={isLoggedIn() 
         />
         {/*Page Not Found*/}
         <Route component={NotFound} />
